@@ -15,5 +15,6 @@ Url.prototype.__proto__ = mongoose.SchemaTypes.String.prototype;
 Url.prototype.cast = function (val) {
 	return normalizeurl(val);
 };
+
 mongoose.SchemaTypes.Url = Url;
 mongoose.Types.Url = String;
