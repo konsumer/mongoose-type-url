@@ -16,6 +16,5 @@ Url.prototype.cast = function (val) {
 	return normalizeurl(val);
 };
 
-mongoose.SchemaTypes.Url = Url;
 mongoose.SchemaTypes.Url = module.exports = Url;
 mongoose.Types.Url = String;
