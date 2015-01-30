@@ -1,14 +1,10 @@
 # mongoose-type-url
+
 A url field-type for Mongoose schemas
 
-[![npm version](https://badge.fury.io/js/mongoose-type-url.svg)](http://badge.fury.io/js/mongoose-type-url)
+[![npm](https://www.npmjs.com/package/mongoose-type-url)](https://nodei.co/npm/mongoose-type-url.png)
 [![Build Status](https://travis-ci.org/konsumer/mongoose-type-url.svg?branch=master)](https://travis-ci.org/konsumer/mongoose-type-url)
 [![Code Climate](https://codeclimate.com/github/konsumer/mongoose-type-url/badges/gpa.svg)](https://codeclimate.com/github/konsumer/mongoose-type-url)
-
-## installation
-
-    npm install mongoose-type-url
-
 
 ## usage
 
