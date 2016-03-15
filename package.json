@@ -1,6 +1,6 @@
 {
   "name": "mongoose-type-url",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A url field-type for Mongoose schemas",
   "main": "index.js",
   "scripts": {
@@ -29,9 +29,9 @@
     "chai": "^1.10.0",
     "mocha": "^2.1.0",
     "mockgoose": "^1.10.7",
-    "mongoose": "^4.3.5"
+    "mongoose": ""
   },
   "peerDependencies": {
-    "mongoose": "^4.3.5"
+    "mongoose": ""
   }
 }
