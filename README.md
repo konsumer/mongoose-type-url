@@ -1,5 +1,7 @@
 # mongoose-type-url
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/konsumer/mongoose-type-url.svg)](https://greenkeeper.io/)
+
 A url field-type for Mongoose schemas
 
 [![npm](https://nodei.co/npm/mongoose-type-url.png)](https://www.npmjs.com/package/mongoose-type-url)
