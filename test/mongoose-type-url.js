@@ -1,3 +1,5 @@
+/* global describe, before, after, it */
+
 var expect = require('chai').expect
 var mongoose = require('mongoose')
 require('../')
@@ -31,6 +33,7 @@ describe('mongoose-type-url', function () {
 
   after(function () {
     mongoose.connection.close()
+    mongoose.disconnect()
   })
 
   it('should enable basic url field-type in schema', function (done) {
