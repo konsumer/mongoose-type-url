@@ -1,10 +1,10 @@
 # mongoose-type-url
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/konsumer/mongoose-type-url.svg)](https://greenkeeper.io/)
-
 A url field-type for Mongoose schemas
 
 [![npm](https://nodei.co/npm/mongoose-type-url.png)](https://www.npmjs.com/package/mongoose-type-url)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/konsumer/mongoose-type-url.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/konsumer/mongoose-type-url.svg?branch=master)](https://travis-ci.org/konsumer/mongoose-type-url)
 [![Code Climate](https://codeclimate.com/github/konsumer/mongoose-type-url/badges/gpa.svg)](https://codeclimate.com/github/konsumer/mongoose-type-url)
 
