@@ -4,7 +4,8 @@
   "description": "A url field-type for Mongoose schemas",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest",
+    "release": "release-it -p -n"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,10 @@
     "normalizeurl": "^1.0.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0",
-    "mockgoose": "^7.3.5",
-    "mongoose": "^5.1.1"
+    "jest": "^22.4.4",
+    "mockingoose": "^2.9.1",
+    "mongoose": "^5.1.1",
+    "release-it": "^7.4.5"
   },
   "peerDependencies": {
     "mongoose": ""
