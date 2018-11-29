@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var normalizeUrl = require('normalizeurl')
+var normalizeUrl = require('normalize-url')
 
 var regUrl = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/
 
