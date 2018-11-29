@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/konsumer/mongoose-type-url",
   "dependencies": {
+    "cryptiles": "^4.1.2",
     "normalizeurl": "^1.0.0"
   },
   "devDependencies": {
