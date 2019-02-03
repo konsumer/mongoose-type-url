@@ -12,7 +12,7 @@ function Url (path, options) {
   this.validate(validateUrl, 'url is invalid')
 }
 
-Object.setPrototypeOf(Url.prototype, mongoose.SchemaTypes.String.prototype)
+Object.assign(Url, mongoose.SchemaTypes.String);
 
 Url.prototype.cast = function (val) {
   return normalizeUrl(val)
