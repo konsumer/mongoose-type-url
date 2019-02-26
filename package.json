@@ -30,7 +30,7 @@
   "devDependencies": {
     "jest": "^22.4.4",
     "mockingoose": "^2.9.1",
-    "mongoose": "^5.3.14",
+    "mongoose": "^5.4.16",
     "release-it": "^8.0.1"
   },
   "peerDependencies": {
