@@ -28,10 +28,10 @@
     "normalize-url": "^4.0.0"
   },
   "devDependencies": {
-    "jest": "^22.4.4",
+    "jest": "^24.7.1",
     "mockingoose": "^2.9.1",
     "mongoose": "^5.3.14",
-    "release-it": "^8.0.1"
+    "release-it": "^10.4.3"
   },
   "peerDependencies": {
     "mongoose": "*"
