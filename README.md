@@ -12,7 +12,7 @@ A url field-type for Mongoose schemas
 
 This will validate a url, correctly:
 
-```
+```js
 var mongoose = require('mongoose');
 require('mongoose-type-url');
 
@@ -26,7 +26,7 @@ var UserSchema = new mongoose.Schema({
 
 You can also use the stuff in `String` type:
 
-```javascript
+```js
 var UserSchema = new mongoose.Schema({
     url: {
         work: {type: mongoose.SchemaTypes.Url, required: true},
@@ -38,7 +38,7 @@ var UserSchema = new mongoose.Schema({
 You can also use it as an array:
 
 
-```javascript
+```js
 var UserSchema = new mongoose.Schema({
     urls: [{type: mongoose.SchemaTypes.Url}]
 });
