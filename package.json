@@ -25,7 +25,7 @@
   "homepage": "https://github.com/konsumer/mongoose-type-url",
   "dependencies": {
     "cryptiles": "^4.1.2",
-    "normalize-url": "^4.0.0"
+    "normalize-url": "^5.0.0"
   },
   "devDependencies": {
     "jest": "^24.7.1",
