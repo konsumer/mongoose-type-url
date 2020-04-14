@@ -8,20 +8,33 @@ const UserSimple = mongoose.model('UserSimple', new mongoose.Schema({
 }))
 
 const UserRequired = mongoose.model('UserRequired', new mongoose.Schema({
-  url: {type: mongoose.SchemaTypes.Url, required: true}
+  url: { type: mongoose.SchemaTypes.Url, required: true }
+}))
+
+const UserRequiredAllowBlank = mongoose.model('UserRequiredAllowBlank', new mongoose.Schema({
+  url: { type: mongoose.SchemaTypes.Url, required: true, allowBlank: true }
 }))
 
 const UserNested = mongoose.model('UserNested', new mongoose.Schema({
   url: {
-    work: {type: mongoose.SchemaTypes.Url, required: true},
-    profile: {type: mongoose.SchemaTypes.Url, required: true}
+    work: { type: mongoose.SchemaTypes.Url, required: true },
+    profile: { type: mongoose.SchemaTypes.Url, required: true }
   }
 }))
 
 describe('mongoose-type-url', function () {
-  it('should enable basic url field-type in schema', function (done) {
+  it('should enable basic url field-type in schema (not required)', function (done) {
     var user = new UserSimple()
     user.save(done)
+  })
+
+  it('should be required, but blank is ok', function (done) {
+    var user = new UserRequiredAllowBlank()
+    user.validate(function (err) {
+      expect(err.errors.url.message).toEqual('Path `url` is required.')
+      user.url = ''
+      user.validate(done)
+    })
   })
 
   it('should require url', function (done) {
