@@ -1,6 +1,6 @@
 {
   "name": "mongoose-type-url",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "A url field-type for Mongoose schemas",
   "main": "index.js",
   "scripts": {
