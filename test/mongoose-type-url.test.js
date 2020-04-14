@@ -60,6 +60,15 @@ describe('mongoose-type-url', function () {
     })
   })
 
+  it('invalid URL on non-required should fail', function (done) {
+    var user = new UserSimple()
+    user.url = 'not a url'
+    user.validate(function (err) {
+      expect(err.errors.url.message).toEqual('Cast to String failed for value "not a url" at path "url"')
+      done()
+    })
+  })
+
   it('blank on required should fail', function (done) {
     var user = new UserRequired()
     user.validate(function (err) {
