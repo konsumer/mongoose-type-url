@@ -43,6 +43,11 @@ describe('mongoose-type-url', function () {
 
   it('should enable basic url field-type in schema (not required)', function (done) {
     var user = new UserSimple()
+    user.save(done)
+  })
+
+  it('should enable basic url field-type in schema (not required, blank)', function (done) {
+    var user = new UserSimple()
     user.url = ''
     user.save(done)
   })
