@@ -11,10 +11,6 @@ const UserRequired = mongoose.model('UserRequired', new mongoose.Schema({
   url: { type: mongoose.SchemaTypes.Url, required: true }
 }))
 
-const UserRequiredAllowBlank = mongoose.model('UserRequiredAllowBlank', new mongoose.Schema({
-  url: { type: mongoose.SchemaTypes.Url, required: true, allowBlank: true }
-}))
-
 const UserNested = mongoose.model('UserNested', new mongoose.Schema({
   url: {
     work: { type: mongoose.SchemaTypes.Url, required: true },
@@ -22,19 +18,33 @@ const UserNested = mongoose.model('UserNested', new mongoose.Schema({
   }
 }))
 
-describe('mongoose-type-url', function () {
-  it('should enable basic url field-type in schema (not required)', function (done) {
-    var user = new UserSimple()
-    user.save(done)
-  })
+const UserString = mongoose.model('UserString', new mongoose.Schema({
+  url: { type: String, required: true }
+}))
 
-  it('should be required, but blank is ok', function (done) {
-    var user = new UserRequiredAllowBlank()
+describe('mongoose-type-url', function () {
+  // test so we can see if this field-type works like String
+  it('String should fail with no value', function (done) {
+    var user = new UserString()
     user.validate(function (err) {
       expect(err.errors.url.message).toEqual('Path `url` is required.')
-      user.url = ''
-      user.validate(done)
+      done()
     })
+  })
+
+  it('String should fail on blank', function (done) {
+    var user = new UserString()
+    user.url = ''
+    user.validate(function (err) {
+      expect(err.errors.url.message).toEqual('Path `url` is required.')
+      done()
+    })
+  })
+
+  it('should enable basic url field-type in schema (not required)', function (done) {
+    var user = new UserSimple()
+    user.url = ''
+    user.save(done)
   })
 
   it('should require url', function (done) {
@@ -42,6 +52,18 @@ describe('mongoose-type-url', function () {
     user.validate(function (err) {
       expect(err.errors.url.message).toEqual('Path `url` is required.')
       done()
+    })
+  })
+
+  it('blank on required should fail', function (done) {
+    var user = new UserRequired()
+    user.validate(function (err) {
+      expect(err.errors.url.message).toEqual('Path `url` is required.')
+      user.url = ''
+      user.validate(function (err) {
+        expect(err.errors.url.message).toEqual('Cast to String failed for value "" at path "url"')
+        done()
+      })
     })
   })
 

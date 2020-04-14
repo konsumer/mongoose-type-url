@@ -5,8 +5,7 @@ var regUrl = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.
 
 function validateUrl (val, options) {
   var required = (typeof options.required === 'function') ? options.required() : options.required
-  var passedAllowBlank = options.allowBlank && (val === '' || val === null)
-  if (passedAllowBlank && !required) {
+  if ((!val || val === '') && !required) {
     return true
   }
   return regUrl.test(val)
