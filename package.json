@@ -31,7 +31,7 @@
     "jest": "^24.7.1",
     "mockingoose": "^2.9.1",
     "mongoose": "^5.3.14",
-    "release-it": "^13.0.0"
+    "release-it": "^13.6.0"
   },
   "peerDependencies": {
     "mongoose": "*"
