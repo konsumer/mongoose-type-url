@@ -75,7 +75,7 @@ describe('mongoose-type-url', function () {
       expect(err.errors.url.message).toEqual('Path `url` is required.')
       user.url = ''
       user.validate(function (err) {
-        expect(err.errors.url.message).toEqual('Cast to String failed for value "" at path "url"')
+        expect(err.errors.url.message).toEqual('Path `url` is required.')
         done()
       })
     })

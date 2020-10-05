@@ -23,11 +23,11 @@ Url.defaults = {}
 Object.setPrototypeOf(Url.prototype, mongoose.SchemaTypes.String.prototype)
 
 Url.prototype.cast = function (val) {
-  return normalizeUrl(val)
+  return val !== '' ? normalizeUrl(val) : ''
 }
 
 Url.prototype.get = function (val) {
-  return normalizeUrl(val)
+  return val !== '' ? normalizeUrl(val) : ''
 }
 
 Url.prototype.checkRequired = function (val) {
